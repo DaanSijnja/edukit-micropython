@@ -248,7 +248,7 @@ async def set_pid(Kp,Ki,Kd,channel=None):
     
 
 if __name__ == "__main__":
-    serial_port = "COM4" if sys.platform == "win32" else "/dev/ttyACM0"
+    serial_port = "COM3" if sys.platform == "win32" else "/dev/ttyACM0"
     baudrate    = 115200
     #timeout     = 0.1
     _ = None
