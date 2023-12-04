@@ -118,7 +118,7 @@ async def ser_eval(ser,command,async_sleep_time_for_CTS=0.01):
         ser.reset_output_buffer()
         ser.reset_input_buffer()
         #ser.setRTS(True) # does not work on Windows
-        command_byte = (command+'\r\n').encode('utf-8') # extend with C-n)
+        command_byte = (command+'\n').encode('utf-8') # extend with C-n)
         #while not ser.getCTS(): # does not work on Windows
         #    await asyncio.sleep(async_sleep_time_for_CTS)
         await ser.write_async(command_byte)
@@ -248,7 +248,7 @@ async def set_pid(Kp,Ki,Kd,channel=None):
     
 
 if __name__ == "__main__":
-    serial_port = "COM3" if sys.platform == "win32" else "/dev/ttyACM0"
+    serial_port = "COM7" if sys.platform == "win32" else "/dev/ttyACM0"
     baudrate    = 115200
     #timeout     = 0.1
     _ = None

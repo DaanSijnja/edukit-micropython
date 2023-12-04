@@ -2,7 +2,7 @@ import subprocess
 import PySimpleGUI as sg
 
 
-setterList = ["KP1","KI1","KD1","KP2","KI2","KD2"]
+setterList = ["Kp1","Ki1","Kd1","Kp2","Ki2","Kd2"]
 
 ##generate sidebar
 sidebartop = [
@@ -46,6 +46,7 @@ commandLayout = [
     [sg.Push(),sg.Text("COMMAND OUTPUT",justification='c'),sg.Push()],
     [sg.HSeparator()],
     [sg.Multiline(size=(50,30),key="-cmdoutput-",default_text="opened command viewer",autoscroll=True,background_color='#000000',text_color='#ffffff')],
+    [sg.InputText(),sg.Button("Send")]
 ]
 
 mainLayout = [[sg.Push(),sg.Text("COMMAND UI EDUKIT HHS",justification='c'),sg.Push()],
@@ -60,14 +61,19 @@ def SendCommand(args):
 
     for arg in args:
         _input += arg + " "
-
-    _output = subprocess.run(args,text=True,capture_output=True)
+    print(_input)
+    try:
+        _output = subprocess.run(args,text=True,capture_output=True)
+    except:
+        _output = "Something went wrong with this command"
+        return (_input, _output)
     return (_input, _output.stdout)
 
 def SetToOutput(text,_window):
     t = _window['-cmdoutput-']
     t.update(t.get()+'\n'+ text )
     
+
 
 
 while True:
@@ -80,21 +86,23 @@ while True:
         a = SendCommand(['rshell','-l'])
         SetToOutput(a[0],window)
         SetToOutput(a[1],window)
-        print(a[0])
-        print(a[1])
+        
     
     if event in ("-flash-"):
         a = SendCommand(['rshell','-p',values["-flashinput-"],'cp','*.mpy','/flash/'])
-        print(a[0])
-        print(a[1])
+        SetToOutput(a[0],window)
+        SetToOutput(a[1],window)
 
     if event in ("-openedukit-"):
         a = SendCommand(['python','.\edukit_pc.py '])
-        print(a[0])
-        print(a[1])
+        SetToOutput(a[0],window)
+        SetToOutput(a[1],window)
 
-    
-
+    for item in setterList:
+        if(item+"button" == event):
+            a = SendCommand(["mp",f'pid.{item}','=',values[item+"input"]])
+            SetToOutput(a[0],window)
+            SetToOutput(a[1],window)
 
     
 
