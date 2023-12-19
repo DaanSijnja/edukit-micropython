@@ -1,5 +1,8 @@
 {
     "python.analysis.inlayHints.callArgumentNames": "all",
     "python.analysis.inlayHints.functionReturnTypes": true,
-    "python.autoComplete.extraPaths": []
+    "python.autoComplete.extraPaths": [
+        
+    ],
+    "python.analysis.extraPaths": []
 }
