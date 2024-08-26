@@ -1,0 +1,120 @@
+{
+    "white_cards": [
+        {
+            "card_index": -1,
+            "card_type": 0,
+            "card_text": "HELL YEAH!",
+            "blank_spaces": -1
+        },
+        {
+            "card_index": -2,
+            "card_type": 0,
+            "card_text": "Yes I'm ready",
+            "blank_spaces": -1
+        },
+        {
+            "card_index": -3,
+            "card_type": 0,
+            "card_text": "Yes Bitch",
+            "blank_spaces": -1
+        },
+        {
+            "card_index": -4,
+            "card_type": 0,
+            "card_text": "Aye I am content to playeth this game",
+            "blank_spaces": -1
+        },
+        {
+            "card_index": -5,
+            "card_type": 0,
+            "card_text": "Game Start!",
+            "blank_spaces": -1
+        },
+        {
+            "card_index": -6,
+            "card_type": 0,
+            "card_text": "I was born ready",
+            "blank_spaces": -1
+        },
+        {
+            "card_index": -7,
+            "card_type": 0,
+            "card_text": "Ready? yeah sure",
+            "blank_spaces": -1
+        },
+        {
+            "card_index": -8,
+            "card_type": 0,
+            "card_text": "I am the definition of ready, bitch",
+            "blank_spaces": -1
+        },
+        {
+            "card_index": -9,
+            "card_type": 0,
+            "card_text": "FUCK NO!",
+            "blank_spaces": -1
+        },
+        {
+            "card_index": -10,
+            "card_type": 0,
+            "card_text": "No I'm not ready",
+            "blank_spaces": -1
+        },
+        {
+            "card_index": -11,
+            "card_type": 0,
+            "card_text": "Wait wait! I have stuff to do",
+            "blank_spaces": -1
+        },
+        {
+            "card_index": -12,
+            "card_type": 0,
+            "card_text": "Nah ah",
+            "blank_spaces": -1
+        },
+        {
+            "card_index": -13,
+            "card_type": 0,
+            "card_text": "I dont think so",
+            "blank_spaces": -1
+        },
+        {
+            "card_index": -14,
+            "card_type": 0,
+            "card_text": "I got other things to do",
+            "blank_spaces": -1
+        },
+        {
+            "card_index": -15,
+            "card_type": 0,
+            "card_text": "No.............",
+            "blank_spaces": -1
+        },
+        {
+            "card_index": -16,
+            "card_type": 0,
+            "card_text": "NOOO, NOOOO, NO NO NO NO",
+            "blank_spaces": -1
+        },
+        {
+            "card_index": -22,
+            "card_type": 0,
+            "card_text": "Start the game",
+            "blank_spaces": -1
+        }
+    ],
+    "black_cards": [
+        {
+            "card_index": -20,
+            "card_type": 1,
+            "card_text": "Are you ready to play?",
+            "blank_spaces": 1
+        },
+        {
+            "card_index": -21,
+            "card_type": 1,
+            "card_text": "Looks like everyone is ready!",
+            "blank_spaces": 1
+        }
+    ]
+}
